@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --purple: mediumpurple;
+    --black: black;
+    --light-color: lightgrey;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all 0.2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+header .logo{
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+header .logo i{
+    color: var(--purple);
+}
+.icons i{
+    cursor: pointer;
+    margin-left: 0.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: var(--light-color);
+}
+.icons i:hover{
+    color: white;
+    background: var(--purple);
+    transform: rotate(360deg);
+}
+.home{
+    padding: 2rem 9%;
+    background: #eeee;
+}
+.home .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 9rem;
+}
+.home .slide .content{
+    flex: 1 1 45rem;
+}
+.home  .slide .image{
+    flex: 1 1 45rem;
+}
+.home .slide .image img{
+    width: 100%;
+    border-radius: 360px;
+}
+.home .slide .content h4{
+    color: var(--black);
+    font-size: 2.5rem;
+}
+span{
+    color: var(--purple);
+}
+.home .slide .content h3{
+    color: var(--black);
+    font-size: 7rem;
+}
+p{
+    color: var(--black);
+    font-size: 2.2rem;
+    padding: 3rem 0;
+}
+.recipe{
+    padding: 3rem 9%;
+    background: white;
+}
+.recipe .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1.5rem;
+    padding-right: 2rem;
+    padding-left: 3rem;
+}
+.recipe .box-container .box{
+    padding: 3rem;
+    background: white;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    padding-left: 6rem;
+    padding-right: 5rem;
+}
+.recipe .box-container .box h4{
+    color: var(--purple);
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+}
+.recipe .box-container .box ul li{
+    font-size: 2.2rem;
+    padding-bottom: 0.9rem;
+    text-align: justify;
+}
+
+
+
+
+
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+}
+@media(max-width: 768px){
+    .home .slide .content h3{
+        font-size: 5rem;
+    }
+}
+@media(max-width: 991px){
+    html{
+        font-size: 50%;
+    }
+    .recipe .box-container .box img{
+        height: auto;
+        width: 100%;
+    }
+}
